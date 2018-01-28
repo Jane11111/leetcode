@@ -54,12 +54,14 @@ vector<Interval> insert(vector<Interval>& intervals, Interval newInterval) {
 
     int nums[size*2];
     int index=0;
+    //把intervals中的数全都取出来放到nums数组中
     for (int i=0;i<size;i++){
         Interval interval=intervals[i];
         nums[index]=interval.start;
         nums[index+1]=interval.end;
         index+=2;
     }
+    //插入排序
     for(int i=0;i<size*2;i++){
         int n=nums[i];
         for(int j=i-1;j>=0;j--){
