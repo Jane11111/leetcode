@@ -16,22 +16,23 @@ int main() {
 string reorganizeString(string S) {
 
 
-    int max=26;
-    int arr[max];
+    int max=26;//一共26个字母
+    int arr[max];//存储每个字母出现的次数
     for(int i=0;i<max;i++)
         arr[i]=0;
 
     int len=S.length();
-    int largest=0;
+    int largest=0;//字母出现的最大的次数
     for(int i=0;i<len;i++){
         int t=CharToInt(S[i]);
         arr[t]+=1;
         if(arr[t]>largest)
             largest=arr[t];
     }
-
+    //如果一个字母出现次数太大 不能够保证题设条件 返回空字符串
     if(len%2&&largest>(len/2+1) || (len%2==0)&&largest>len/2)
         return "";
+
     string res="";
     vector<int> nums;
     for(int i=0;i<len;i++){
@@ -42,7 +43,7 @@ string reorganizeString(string S) {
         arr[nums[1]]--;
         res+=c1;
         i+=1;
-        if(i!=len)
+        if(i!=len)//如果c1是最后一个字母就不用再考虑c2了
             res+=c2;
 
 
@@ -50,7 +51,7 @@ string reorganizeString(string S) {
     return res;
 
 }
-
+//这个函数返回当前arr中最大和第二大的下标
 vector<int> FindMax(int* arr,int len){
     vector<int> res;
 
