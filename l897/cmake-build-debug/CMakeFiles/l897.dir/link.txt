@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/l897.dir/main.cpp.o  -o l897 

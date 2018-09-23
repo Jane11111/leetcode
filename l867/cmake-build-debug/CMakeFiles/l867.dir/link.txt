@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/l867.dir/main.cpp.o  -o l867 

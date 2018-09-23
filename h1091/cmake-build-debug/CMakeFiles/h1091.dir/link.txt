@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/h1091.dir/main.cpp.o  -o h1091 

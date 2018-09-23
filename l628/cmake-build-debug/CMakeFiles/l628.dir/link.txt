@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/l628.dir/main.cpp.o  -o l628 
